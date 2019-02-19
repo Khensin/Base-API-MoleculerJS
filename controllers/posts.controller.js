@@ -1,6 +1,3 @@
-const _ = require('lodash');
-// const { ValidationError } = require('moleculer').Errors;
-// const { ResourceNotFoundError } = require('../lib/errors');
 const { Post: model } = require('../db/models');
 const SequelizeResource = require('../lib/sequelize.resource');
 

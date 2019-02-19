@@ -21,13 +21,21 @@ module.exports = {
   },
   mixins: [SequelizeResource],
   actions: {
-    get(ctx) {
-      const { service } = ctx;
-      return service.sendResponse([
-        {
-          name: 'Override Dummy Category'
-        }
-      ]);
+    get: {
+      auth: 'required',
+      handler(ctx) {
+        const { service } = ctx;
+        return service.sendResponse([
+          {
+            name: 'Override Dummy Category'
+          }
+        ]);
+      }
+    },
+    upload: {
+      handler(ctx) {
+        console.log('params is: ', ctx.params);
+      }
     }
   }
 };

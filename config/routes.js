@@ -1,6 +1,7 @@
+const { call: multipartform } = require('../lib/aliases');
 // INFO about routes
 
-// EXAMPLE REST methods ======================
+// EXAMPLE REST methods =============
 // 'GET posts': 'posts.list'
 // 'GET posts/:id': 'posts.get',
 // 'POST posts': 'posts.create',
@@ -11,5 +12,7 @@
 module.exports = {
   // Restful API for posts
   'REST posts': 'posts',
-  'REST categories': 'categories'
+  'REST categories': 'categories',
+  'POST login': 'users.login',
+  'POST upload': (req, res) => multipartform(req, res, 'categories.upload')
 };
