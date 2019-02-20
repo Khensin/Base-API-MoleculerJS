@@ -3,7 +3,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 
 // eslint-disable-next-line import/no-dynamic-require
-const databaseSetting = require(`${__dirname}/../../config/database.json`);
+const databaseSetting = require(`${__dirname}/../../config/config.js`);
 
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
